@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import GrowingTree from './components/GrowingTree.vue'
+import Snakes from './components/Snakes.vue'
 </script>
 
 <template>
-  <GrowingTree />
+  <Snakes />
 </template>
 
 <style scoped>

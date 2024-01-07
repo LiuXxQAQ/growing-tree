@@ -41,7 +41,7 @@ function getEndPoint(b: Branch): Point {
   }
 }
 
-function step(b: Branch, depth: number = 0) {
+function step(b: Branch, depth: number = 1) {
   const endPoint = getEndPoint(b)
   line(b.startPoint, endPoint)
 
@@ -50,7 +50,7 @@ function step(b: Branch, depth: number = 0) {
       startPoint: endPoint,
       angel: b.angel + Math.random() * Math.PI / 4 - Math.PI / 8,
       length: b.length * (0.7 + Math.random() * 0.3),
-    }, depth + 1))
+    }, depth + 0.5))
   }
 
   if (depth <= 4 || Math.random() < 0.4) {
@@ -58,7 +58,7 @@ function step(b: Branch, depth: number = 0) {
       startPoint: endPoint,
       angel: b.angel - Math.random() * Math.PI / 4 + Math.PI / 8,
       length: b.length * (0.7 + Math.random() * 0.3),
-    }, depth + 1))
+    }, depth + 0.6))
   }
 }
 
